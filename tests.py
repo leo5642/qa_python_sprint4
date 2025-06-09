@@ -24,7 +24,6 @@ class TestBooksCollector1:
     # чтобы тесты были независимыми в каждом из них создавай отдельный экземпляр класса BooksCollector()
 
 
-class TestBooksCollector2:
     def test_set_book_genre_add_two_books_and_genre(self):#2
         
         collector = BooksCollector()
@@ -39,7 +38,6 @@ class TestBooksCollector2:
         assert collector.get_books_genre()['Что делать, если ваш кот хочет вас убить'] ==  'Комедии'
 
 
-class TestBooksCollector3:
     def test_get_book_genre_add_book(self):#3
         
         collector = BooksCollector()
@@ -50,7 +48,6 @@ class TestBooksCollector3:
         assert collector.get_books_genre()['Гордость и предубеждение и зомби'] == 'Ужасы'
 
 
-class TestBooksCollector4:
     def test_get_books_with_specific_genre_add_three_books(self):#4
         
         collector = BooksCollector()
@@ -69,7 +66,6 @@ class TestBooksCollector4:
         assert len(collector.get_books_with_specific_genre('Фантастика')) == 0
 
 
-class TestBooksCollector5:
     def test_get_books_genre(self):#5
         
         collector = BooksCollector()
@@ -79,7 +75,6 @@ class TestBooksCollector5:
         assert len(collector.get_books_genre()) == 1
 
 
-class TestBooksCollector6:
     def test_get_books_for_children_add_two_book(self):#6
         
         collector = BooksCollector()
@@ -94,7 +89,6 @@ class TestBooksCollector6:
         assert 'Гордость и предубеждение и зомби' not in collector.get_books_for_children()
 
 
-class TestBooksCollector7:
     def test_add_book_in_favorites_add_book(self):#7
         
         collector = BooksCollector()
@@ -105,7 +99,6 @@ class TestBooksCollector7:
         assert 'Гордость и предубеждение и зомби' in collector.favorites
 
 
-class TestBooksCollector8:
     def test_delete_book_from_favorites_add_book_and_delete(self):#8
 
         collector = BooksCollector()
@@ -117,7 +110,6 @@ class TestBooksCollector8:
         assert collector.favorites == []
 
 
-class TestBooksCollector9:
     def test_get_list_of_favorites_books(self):#9
 
         collector = BooksCollector()
