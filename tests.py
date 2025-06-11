@@ -90,24 +90,24 @@ class TestBooksCollector1:
 
 
     def test_add_book_in_favorites_add_book(self):#7
-        
+
         collector = BooksCollector()
-        
+
         collector.add_new_book('Гордость и предубеждение и зомби')
         collector.add_book_in_favorites('Гордость и предубеждение и зомби')
 
-        assert 'Гордость и предубеждение и зомби' in collector.favorites
+        assert 'Гордость и предубеждение и зомби' in collector.get_list_of_favorites_books()
 
 
     def test_delete_book_from_favorites_add_book_and_delete(self):#8
 
         collector = BooksCollector()
-        
+
         collector.add_new_book('Гордость и предубеждение и зомби')
         collector.add_book_in_favorites('Гордость и предубеждение и зомби')
         collector.delete_book_from_favorites('Гордость и предубеждение и зомби')
 
-        assert collector.favorites == []
+        assert collector.get_list_of_favorites_books() == []
 
 
     def test_get_list_of_favorites_books(self):#9
@@ -115,4 +115,4 @@ class TestBooksCollector1:
         collector = BooksCollector()
         collector.add_book_in_favorites('Гордость и предубеждение и зомби')
 
-        assert collector.favorites == []
+        assert collector.get_list_of_favorites_books() == []
